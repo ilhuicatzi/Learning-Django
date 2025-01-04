@@ -16,7 +16,7 @@ const chapters = await getCollection("chapters");
     <ul>
       {chapters.map((chapter: Chapter) => (
         <li class="list-disc ml-5">
-          <a href={`${chapter.data.url}`}>{chapter.data.title}</a>
+          <a href={`/chapters/${chapter.slug}`}>{chapter.data.title}</a>
         </li>
       ))}
     </ul>
