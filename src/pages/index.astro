@@ -1,11 +1,26 @@
 ---
 import "@fontsource-variable/nunito-sans";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+
+import { getCollection } from "astro:content";
+import type { Chapter } from "../types/chapters";
+
+const chapters = await getCollection("chapters");
 ---
 
 <Layout>
-  <Welcome />
+  <Hero />
+  <section class="p-10 max-w-4xl">
+    <h2 class="text-3xl">Secciones</h2>
+    <ul>
+      {chapters.map((chapter: Chapter) => (
+        <li class="list-disc ml-5">
+          <a href={`${chapter.data.url}`}>{chapter.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
 </Layout>
 
 <style>
