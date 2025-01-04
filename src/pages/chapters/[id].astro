@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import type { Chapter } from "../../types/chapters";
+
+export async function getStaticPaths(){
+  const chapters = await getCollection("chapters");
+  return chapters.map((chapter: Chapter) => ({
+    params: { id: chapter.slug },
+    props: { chapter },
+  }));
+}
+
+const { chapter } = Astro.props;
+const { data} = chapter;
+const { title } = data;
+const { Content } = await render(chapter);
+---
+
+<Layout title={title}>
+  <section class="p-10 max-w-4xl">
+    <div class="prose prose-invert">
+        <Content />
+    </div>
+  </section>
+</Layout>
