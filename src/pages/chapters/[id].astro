@@ -17,9 +17,10 @@ const { title } = data;
 const { Content } = await render(chapter);
 ---
 
-<Layout title={title}>
+<Layout title={`GonzDev | ${title}`}>
   <section class="p-10 max-w-4xl">
     <div class="prose prose-invert">
+        <h1 transition:name={`${chapter.slug}`}>{title}</h1>
         <Content />
     </div>
   </section>
