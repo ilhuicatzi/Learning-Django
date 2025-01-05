@@ -5,13 +5,20 @@ import type { Chapter } from "../types/chapters";
 const chapters = await getCollection("chapters");
 ---
 
-<section class="p-10 max-w-4xl">
-    <h2 class="text-3xl">Secciones</h2>
-    <ul>
-      {chapters.map((chapter: Chapter) => (
-        <li class="list-disc ml-5">
-          <a href={`/chapters/${chapter.slug}`}>{chapter.data.title}</a>
-        </li>
-      ))}
-    </ul>
-  </section>
+<section class="px-10 max-w-4xl">
+  <div class="grid grid-cols-3 gap-5">
+    {
+      chapters.map((chapter: Chapter) => (
+        <article class="px-5 py-2 border border-gray-900 rounded-lg hover:shadow-md hover:shadow-gray-900 hover:scale-105 transition-transform duration-500">
+          <a
+            class="font-medium"
+            href={`/chapters/${chapter.slug}`}
+            transition:name={`${chapter.slug}`}
+          >
+            {chapter.data.title}
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>
