@@ -6,8 +6,6 @@ url: /chapters/api-crud-django/
 date: 2025-01-03
 ---
 
-# API CRUD con Django
-
 En esta sección se explicará cómo crear una API CRUD con Django. Para ello, se utilizará el modelo de datos de la sección anterior.
 
 ## Creación de la API
