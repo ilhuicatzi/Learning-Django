@@ -2,8 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
 import type { Chapter } from "../../types/chapters";
+import ArrowLeft from "../../assets/icons/ArrowLeft.astro";
+import ArrowRigth from "../../assets/icons/ArrowRigth.astro";
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
   const chapters = await getCollection("chapters");
   return chapters.map((chapter: Chapter) => ({
     params: { id: chapter.slug },
@@ -12,7 +14,7 @@ export async function getStaticPaths(){
 }
 
 const { chapter } = Astro.props;
-const { data} = chapter;
+const { data } = chapter;
 const { title } = data;
 const { Content } = await render(chapter);
 ---
@@ -20,8 +22,19 @@ const { Content } = await render(chapter);
 <Layout title={`GonzDev | ${title}`}>
   <section class="p-10 max-w-4xl">
     <div class="prose prose-invert">
-        <h1 transition:name={`${chapter.slug}`}>{title}</h1>
-        <Content />
+      <h1 transition:name={`${chapter.slug}`}>{title}</h1>
+      <Content />
     </div>
+    <footer class="max-w-xl mt-10">
+      <nav class="flex justify-between">
+        <a href="/" class="text-gray-400 hover:text-gray-50 flex gap-2 items-center">
+          <ArrowLeft /> <span>Capítulos</span></a
+        >
+        <a href="/" class="text-gray-400 hover:text-gray-50 flex gap-2 items-center">
+          <span>Siguiente</span>
+          <ArrowRigth />
+        </a>
+      </nav>
+    </footer>
   </section>
 </Layout>
