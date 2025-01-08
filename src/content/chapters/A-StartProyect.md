@@ -16,3 +16,27 @@ para este ejemplo y comunmente se utiliza el nombre `venv` para el entorno virtu
 ```bash
 python -m venv venv
 ```
+
+Una vez creado el entorno virtual, se debe activar el entorno virtual (en Windows) con el siguiente comando:
+
+```bash
+venv\Scripts\activate
+```
+
+En sistemas operativos basados en Unix (Linux y MacOS) el comando es el siguiente:
+
+```bash
+source venv/bin/activate
+```
+
+Una vez activado el entorno virtual, se debe instalar Django con el siguiente comando:
+
+```bash
+pip install django
+```
+
+Para verificar que Django se ha instalado correctamente, se puede ejecutar el siguiente comando:
+
+```bash
+django-admin --version
+```
