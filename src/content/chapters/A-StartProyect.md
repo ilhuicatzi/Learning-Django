@@ -29,6 +29,8 @@ En sistemas operativos basados en Unix (Linux y MacOS) el comando es el siguient
 source venv/bin/activate
 ```
 
+## Instalación de Django
+
 Una vez activado el entorno virtual, se debe instalar Django con el siguiente comando:
 
 ```bash
@@ -40,3 +42,45 @@ Para verificar que Django se ha instalado correctamente, se puede ejecutar el si
 ```bash
 django-admin --version
 ```
+
+## Creación de un proyecto Django
+
+Una vez instalado Django, se puede crear un proyecto Django con el siguiente comando:
+
+```bash
+django-admin startproject [nombre_proyecto]
+```
+
+Para este ejemplo, el nombre del proyecto será `project_crud_api`, por lo que el comando sería:
+
+```bash
+django-admin startproject project_crud_api .
+```
+
+El punto al final del comando indica que el proyecto se creará en el directorio actual. Además de crear el proyecto, se creará un archivo `manage.py` que se utiliza para administrar el proyecto Django.
+
+Dentro del proyecto se creará un directorio con el mismo nombre del proyecto, en este caso `project_crud_api`, que contendrá los archivos y directorios necesarios para el proyecto Django.
+
+### Estructura del proyecto
+
+La estructura del proyecto Django es la siguiente:
+
+```bash
+project_crud_api/
+├── manage.py
+└── project_crud_api/
+    ├── __init__.py
+    ├── asgi.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+```
+
+- `manage.py`: Es un script que ayuda con la administración del proyecto Django.
+- `project_crud_api/`: Es un directorio que contiene el proyecto Django.
+    - `__init__.py`: Es un archivo que indica que el directorio es un paquete de Python.
+    - `asgi.py`: Es un punto de entrada para servidores web compatibles con ASGI.
+    - `settings.py`: Contiene la configuración del proyecto.
+    - `urls.py`: Contiene las definiciones de las URL del proyecto.
+    - `wsgi.py`: Es un punto de entrada para servidores web compatibles con WSGI.
+    
