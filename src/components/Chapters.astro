@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import type { Chapter } from "../types/chapters";
 
 const chapters = await getCollection("chapters");
+console.log(chapters);
 ---
 
 <section class="px-10 max-w-4xl">
