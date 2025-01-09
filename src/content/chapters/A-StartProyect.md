@@ -83,4 +83,9 @@ project_crud_api/
     - `settings.py`: Contiene la configuración del proyecto.
     - `urls.py`: Contiene las definiciones de las URL del proyecto.
     - `wsgi.py`: Es un punto de entrada para servidores web compatibles con WSGI.
-    
+
+Para ejecutar el proyecto Django, se debe ejecutar el siguiente comando:
+
+```bash
+python manage.py runserver
+```
