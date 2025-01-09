@@ -30,7 +30,7 @@ const { Content } = await render(chapter);
         <a href="/" class="text-gray-400 hover:text-gray-50 flex gap-2 items-center">
           <ArrowLeft /> <span>Capítulos</span></a
         >
-        <a href="/" class="text-gray-400 hover:text-gray-50 flex gap-2 items-center">
+        <a href={`${chapter.data.nextUrl}`} class="text-gray-400 hover:text-gray-50 flex gap-2 items-center">
           <span>Siguiente</span>
           <ArrowRigth />
         </a>
