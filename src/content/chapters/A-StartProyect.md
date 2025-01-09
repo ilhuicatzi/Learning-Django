@@ -1,8 +1,9 @@
 ---
-id: chapter1
+id: 1
 title: Configuración del proyecto
 subtitle: Intaleción de dependencias y configuración del proyecto Django
-url: /chapters/start-proyect/
+url: /chapters/a-startproyect/
+nextUrl: /chapters/b-startapp
 date: 2025-01-03
 ---
 
