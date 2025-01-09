@@ -7,9 +7,10 @@ export interface Chapter {
 }
 
 export interface Data {
-    id:       string;
+    id:       number;
     title:    string;
     subtitle: string;
     date:     Date;
     url:      string;
+    nextUrl:  string;
 }
