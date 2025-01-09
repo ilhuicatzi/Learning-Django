@@ -1,5 +1,5 @@
 ---
-id: 2
+id: "B-StartApp"
 title: Creación de la aplicación
 subtitle: Creación de la aplicación Django para operaciones CRUD 
 url: /chapters/b-startapp/

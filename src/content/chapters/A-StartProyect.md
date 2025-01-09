@@ -1,5 +1,5 @@
 ---
-id: 1
+id: "A-StartProyect"
 title: Configuración del proyecto
 subtitle: Intaleción de dependencias y configuración del proyecto Django
 url: /chapters/a-startproyect/
