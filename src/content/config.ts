@@ -4,10 +4,11 @@ import { defineCollection, z } from "astro:content";
 const chapters = defineCollection({
   type: "content",
   schema: z.object({
-    id: z.string(),
+    id: z.number(),
     title: z.string(),
     subtitle: z.string(),
     url: z.string(),
+    nextUrl: z.string(),
     date: z.date(),
   }),
 });
