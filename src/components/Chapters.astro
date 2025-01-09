@@ -3,20 +3,21 @@ import { getCollection } from "astro:content";
 import type { Chapter } from "../types/chapters";
 
 const chapters = await getCollection("chapters");
-console.log(chapters);
+const dataSorted = chapters.sort((a, b) => a.data.id.localeCompare(b.data.id));
+
 ---
 
 <section class="px-10 max-w-4xl">
   <div class="grid grid-cols-3 gap-5">
     {
-      chapters.map((chapter: Chapter) => (
+      dataSorted.map((chapter: Chapter, index) => (
         <article class="px-5 py-2 border border-gray-900 rounded-lg hover:shadow-md hover:shadow-gray-900 hover:scale-105 transition-transform duration-500">
           <a
             class="font-medium"
             href={`/chapters/${chapter.slug}`}
             transition:name={`${chapter.slug}`}
           >
-            {chapter.data.title}
+            <span class="font-bold">{index +1}.</span> {chapter.data.title}
           </a>
         </article>
       ))
