@@ -7,7 +7,7 @@ export interface Chapter {
 }
 
 export interface Data {
-    id:       number;
+    id:       string;
     title:    string;
     subtitle: string;
     date:     Date;
