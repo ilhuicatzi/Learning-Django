@@ -4,7 +4,7 @@ import { defineCollection, z } from "astro:content";
 const chapters = defineCollection({
   type: "content",
   schema: z.object({
-    id: z.number(),
+    id: z.string(),
     title: z.string(),
     subtitle: z.string(),
     url: z.string(),
