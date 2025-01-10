@@ -3,7 +3,7 @@ id: "C-RestFramework"
 title: Django Rest Framework
 subtitle: Creación de una API REST con Django Rest Framework
 url: /chapters/c-restframework/
-nextUrl: /chapters/create-model/
+nextUrl: /chapters/d-modeldb/
 date: 2025-01-09
 ---
 
