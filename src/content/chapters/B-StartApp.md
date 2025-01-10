@@ -3,7 +3,7 @@ id: "B-StartApp"
 title: Creación de la aplicación
 subtitle: Creación de la aplicación Django para operaciones CRUD 
 url: /chapters/b-startapp/
-nextUrl: /chapters/create-model/
+nextUrl: /chapters/c-restframework/
 date: 2025-01-08
 ---
 
